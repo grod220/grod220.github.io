@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  width: 100%;
+  background-color: #3776ea;
+  color: white;
+  margin-bottom:20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.header #logo {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.header #count {
+  margin-left: 45px;
+}
+
+.nav {
+  float: left;
+  width: 18%;
+  border-right-width: 1px;
+  border-right-style: solid;
+  margin-right: 2%;
+  border-color: #a0a0a0;
+  box-sizing: border-box;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav li {
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a:link {
+    text-decoration: none;
+      color: #363636;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: #363636;
+
+}
+
+
+.inbox {
+  float: left;
+  list-style-type: none;
+  margin-left:-40px;
+  color:#545454;
+  width:80%;
+}
+
+#selected {
+  font-weight: bold;
+  color: #3776ea;
+}
+
+.emaillist {
+  padding: 15px;
+  background-color: #f5f5f5;
+  margin-bottom:5px;
+}
+
+.emailsubject {
+  font-weight: bold;
+}
+
+.emaildate {
+  color: #b2b2b2;
+}
+.emailbody {
+  display: none;
+}

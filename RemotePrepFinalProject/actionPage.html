@@ -33,7 +33,6 @@
   padding-left: 10px;
   box-shadow: 1px 1px 11px 0px rgba(50, 50, 50, 0.86);
 }
-
 h1 {
   color: #333333;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -42,25 +41,20 @@ h1 {
   text-align: center;
   font-size: 40px;
 }
-
 .weatherrec {
   font-size: 30px;
   text-align: center;
 }
-
 .displayWeather {
   font-size: 30px;
   text-align: center;
 }
-
 .gifinsertion {
   text-align: center;
 }
-
 .gifinsertion img{
   width:400px;
 }
-
     </style>
   </head>
   <body>
@@ -80,7 +74,6 @@ h1 {
 </div>
     <div id="map"></div>
     <script>
-
       var city;
       var state;
       var latitude;
@@ -102,12 +95,11 @@ h1 {
       var randomHotgif; 
       var randomcoldgif;
       var randommildgif;
-
       function initMap() {
         
        getTemp = function(lat, long){
          $.ajax({
-          url : 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=44db6a862fba0b067b1930da0d769e98',
+          url : 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=95f03ab420ef8033cb6bdc8cbb50c5ec',
           dataType : "jsonp",
           success : function(parsed_json) {
           temp = Math.round(parsed_json['main']['temp'] * 9/5 - 459.67);
@@ -123,7 +115,6 @@ h1 {
            // $(".gifinsertion").html("<img src=\"http://cdn0.dailydot.com/uploaded/images/original/2013/7/25/desert.gif\">");
             randomHotgif = allthehotgifs[Math.floor(Math.random()*allthehotgifs.length)];
            $(".gifinsertion").html("<img src=\"" + randomHotgif +"\">");
-
            
           } else if (temp < 50){
             map.mapTypes.set(blueMapTypeId, blueMapType);
@@ -217,9 +208,7 @@ h1 {
       name: 'Custom Style'
   });
   var mildMapTypeId = 'custom_style';  
-
   
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: {lat: 23.9096187, lng: -29.6761281},
@@ -228,16 +217,12 @@ h1 {
         });
         
         var geocoder = new google.maps.Geocoder();
-
         
-
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
-
         });
             
       }
-
           
       
       
@@ -260,25 +245,19 @@ h1 {
         });
       }
         
-
 // if (temp < 50) {
 //   $(".weatherrec").text('Bro its cold! Seriously get that jumper.').css('color', 'blue');
 // }
 // if (temp > 80) {
 //   $(".weatherrec").text('Dude, sun\'s out. Get those shades.').css('color', 'red');
 // }
-
-
-
 // this needs some work. Not functioning. Supposed to allow enter key to submit address.
-
       function enterPress(e) {
         if (e.keyCode === 13) {
           e.preventDefault();
           geocodeAddress(geocoder, map);
         }
       }
-
     </script>
     
     
@@ -286,5 +265,3 @@ h1 {
         async defer></script>
   </body>
 </html>
-
-

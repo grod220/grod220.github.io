@@ -1,0 +1,45 @@
+.guessbox {
+  margin-top: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .statusbox, .guessbox {
+    margin-top:-90px;
+  }  
+}
+.hinter {
+  color: blue;
+}
+
+.statusbox .glyphicon {
+  font-size: 100px;
+}
+
+.failure {
+  color:red;
+}
+
+.success {
+  color:green;
+}
+
+.webtitle {
+  text-shadow: 4px 3px 0 #4ea6ca,9px 8px 0 rgba(0,0,0,0.15);
+}
+
+.bigblue {
+  background: #4ea6ca;
+  height: 220px;
+}
+
+.bigblue .headerf {
+  padding-top: 10px;
+  font-size: 60px;
+  color:white;
+  font-family: 'Lobster', cursive;
+}
+
+.guesstext {
+    margin-bottom:20px;
+  
+}
